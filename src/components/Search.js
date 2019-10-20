@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import { axios } from 'plugins/axios';
+import Button from 'react-bootstrap/Button';
+import InputGroup from 'react-bootstrap/InputGroup';
+import FormControl from 'react-bootstrap/FormControl';
+import { axios } from '../plugins/axios';
 
 let timeout = {};
 export default ({ onSearch }) => {
@@ -20,12 +23,12 @@ export default ({ onSearch }) => {
 				}
 			});
 			setResult(data);
-			alert('city found, click to add');
+			//alert('city found, click to add');
 			console.log('data:', data);
 		} catch (error) {
 			console.log('error: ', error);
 			setResult(null);
-			alert('city not found');
+			//alert('city not found');
 		}
 	};
 	const debounceFunc = (e) => {
@@ -49,17 +52,19 @@ export default ({ onSearch }) => {
 				value={search}
 				type="text"
 				className="search-input"
+				placeholder="Search City..."
 			/>
-			<button
+			<Button
 				onClick={() => {
 					onSearch(result);
 					setResult(null);
 				}}
 				disabled={!search || !result}
 				className="search-button"
+				variant="primary"
 			>
-				Add
-			</button>
+				<span className="fa fa-plus" />
+			</Button>
 		</div>
 	);
 };

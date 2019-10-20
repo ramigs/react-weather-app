@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Search from './Search';
 import WeatherCard from './WeatherCard';
-import { axios } from 'plugins/axios';
 export default () => {
 	const [
 		items,
@@ -22,6 +21,9 @@ export default () => {
 	return (
 		<div className="container">
 			<Search onSearch={addItem} />
+			<h4>
+				Total Cities <span className="badge badge-info">{items.length}</span>
+			</h4>
 			<div className="cards-list">
 				<div className="row padding">
 					{items.map((item) => (

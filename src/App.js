@@ -1,14 +1,14 @@
 import React from 'react';
 import Header from './components/Header';
-//import Container from './components/Container';
-import logo from './logo.svg';
-import './App.css';
+import Container from './components/Container';
+import './assets/css/App.css';
 
 function App () {
 	const Fragment = React.Fragment;
 	return (
 		<Fragment>
 			<Header />
+			<Container />
 		</Fragment>
 	);
 }

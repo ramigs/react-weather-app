@@ -1,10 +1,10 @@
 import React from 'react';
-import 'assets/weather-card.css';
+import '../assets/css/weather-card.css';
 export default ({ onDelete, item: { main, name } }) => (
 	<div className="weather-card">
 		<h3>{name}</h3>
 		<button onClick={onDelete} className="weather-card__delete">
-			x
+			<span className="fa fa-trash" />
 		</button>
 		<div className="weather-temp">
 			<div className="weather-temp__time">

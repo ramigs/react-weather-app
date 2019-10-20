@@ -1,0 +1,98 @@
+.App-logo {
+	height: 6vmin;
+}
+
+*,
+html,
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.container {
+	max-width: 1290px;
+	margin: 0 auto;
+	padding: 16px;
+	padding-top: 40px;
+}
+nav.navbar {
+	padding: 15px 30px;
+	display: flex;
+	position: sticky;
+	top: 0;
+	align-items: center;
+	height: 64px;
+	background: linear-gradient(90deg, #e67e22, #e74c3c);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-title {
+	color: white;
+}
+.search-container {
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+.search-input {
+	height: 30px;
+	width: 150px;
+	padding: 0px 5px;
+	margin: 5px;
+}
+.search-button {
+	margin: 5px;
+	border: none;
+	background: lightgray;
+	width: 100px;
+	outline: none;
+	color: black;
+	transition: opacity 0.3s ease-out;
+}
+.search-button:active {
+	transform: scale(0.9);
+}
+
+.search-button:disabled {
+	opacity: 0.3;
+	pointer-events: none;
+}
+.cards-list {
+	padding-top: 25px;
+}
+
+.locations {
+	list-style-type: none;
+	max-height: 300px;
+	overflow: auto;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	width: 50%;
+	background: white;
+	margin: 0 auto;
+	padding: 5px;
+	z-index: 10;
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.locations li {
+	padding: 5px 10px;
+	cursor: pointer;
+	transition: all 0.3s linear;
+}
+.locations li:hover {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	padding: 10px;
+}
+
+@media screen and (max-width: 960px) {
+	.container {
+		padding: 25px;
+	}
+}
+
+button {
+	border: 0;
+	outline: 0;
+}

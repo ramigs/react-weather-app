@@ -1,14 +1,12 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
-import FormControl from 'react-bootstrap/FormControl';
-import Button from 'react-bootstrap/Button';
-import Badge from 'react-bootstrap/Badge';
+import logo from '../logo.svg';
 
 export default () => (
-	<Navbar bg="light" expand="lg">
-		<Navbar.Brand href="#home">React Weather App</Navbar.Brand>
+	<Navbar bg="dark" variant="dark" expand="lg">
+		<Navbar.Brand href="#home">
+			<img src={logo} className="App-logo" alt="logo" />
+		</Navbar.Brand>
+		<h2 className="navbar-title">React Weather</h2>
 	</Navbar>
 );
