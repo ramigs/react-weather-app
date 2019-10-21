@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../logo.svg';
+import logo from '../assets/svg/logo.svg';
 
 export default () => (
 	<Navbar bg="dark" variant="dark" expand="lg">

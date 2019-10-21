@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
-import InputGroup from 'react-bootstrap/InputGroup';
-import FormControl from 'react-bootstrap/FormControl';
 import { axios } from '../plugins/axios';
 
 let timeout = {};
@@ -23,12 +21,10 @@ export default ({ onSearch }) => {
 				}
 			});
 			setResult(data);
-			//alert('city found, click to add');
 			console.log('data:', data);
 		} catch (error) {
 			console.log('error: ', error);
 			setResult(null);
-			//alert('city not found');
 		}
 	};
 	const debounceFunc = (e) => {
