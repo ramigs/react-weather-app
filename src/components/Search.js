@@ -38,10 +38,12 @@ export default ({ onSearch }) => {
 	return (
 		<div className="search-container">
 			<input
+				id="SearchInput"
 				onKeyDown={(e) => {
 					if (e.key === 'Enter' && result) {
 						onSearch(result);
 						setResult(null);
+						setSearch('');
 					}
 				}}
 				onChange={debounceFunc}
@@ -54,6 +56,7 @@ export default ({ onSearch }) => {
 				onClick={() => {
 					onSearch(result);
 					setResult(null);
+					setSearch('');
 				}}
 				disabled={!search || !result}
 				className="search-button"
