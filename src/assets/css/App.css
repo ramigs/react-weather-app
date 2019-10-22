@@ -10,6 +10,7 @@ body {
 	box-sizing: border-box;
 }
 .container {
+	position: relative;
 	max-width: 1290px;
 	margin: 0 auto;
 	padding-top: 40px;
@@ -27,6 +28,7 @@ nav.navbar {
 	height: 64px;
 	background: linear-gradient(90deg, #e67e22, #e74c3c);
 	font-family: Arial, Helvetica, sans-serif;
+	z-index: 1;
 }
 
 .navbar-title {

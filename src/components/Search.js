@@ -21,9 +21,7 @@ export default ({ onSearch }) => {
 				}
 			});
 			setResult(data);
-			console.log('data:', data);
 		} catch (error) {
-			console.log('error: ', error);
 			setResult(null);
 		}
 	};
@@ -33,7 +31,7 @@ export default ({ onSearch }) => {
 		clearTimeout(timeout);
 		timeout = setTimeout(() => {
 			getLocations(val);
-		}, 300);
+		}, 200);
 	};
 	return (
 		<div className="search-container">
