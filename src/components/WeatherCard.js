@@ -13,7 +13,7 @@ export default ({ onDelete, item: { main, name } }) => {
 			const id = data.results[Math.floor(Math.random() * 10) + 1].id;
 			setPhotoURL(`https://source.unsplash.com/${id}/536x181`);
 		} catch (error) {
-			setPhotoURL('https://source.unsplash.com/MUIK2uL6pMo/300x300');
+			setPhotoURL('https://source.unsplash.com/MUIK2uL6pMo/536x181');
 		}
 	};
 	const [
